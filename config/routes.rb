@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+root 'payfast#checkout'
+
+get 'success' => 'payfast#success'
+get 'cancelled' => 'payfast#cancelled'
+post 'notify' => 'payfast#notify'
+
 end
