@@ -1,1 +1,27 @@
 CheckOut
+
+<form action="https://sandbox.payfast.co.za/eng/process" method="POST">
+  <input type="hidden" name="merchant_id" value="10000100">
+  <input type="hidden" name="merchant_key" value="46f0cd694581a">
+  <input type="hidden" name="return_url" value="http://payfastexample.localhost/success">
+  <input type="hidden" name="cancel_url" value="http://payfastexample.localhost/cancelled">
+  <input type="hidden" name="notify_url" value="http://payfast.testertest.ultrahook.com/notify">
+
+  <input name="name_first" value="John">
+  <input name="name_last" value="Doe">
+  <input name="email_address" value="john@doe.com">
+  <input name="cell_number" value="0823456789">
+
+  <input name="m_payment_id" value="01AB">
+  <input name="amount" value="100.00">
+  <input name="item_name" value="Test Item">
+  <input name="item_description" value="A test product">
+  <input name="custom_int1" value="2">
+  <input name="custom_str1" value="Extra order information">
+
+  <input name="email_confirmation" value="1">
+  <input name="confirmation_address" value="john@doe.com">
+  <input name="payment_method" value="cc">
+
+  <button type='submit'> Submit </button>
+</form>
