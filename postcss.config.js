@@ -1,3 +1,5 @@
+var tailwindcss = require('tailwindcss');
+
 module.exports = {
   plugins: [
     require('postcss-import'),
@@ -7,6 +9,7 @@ module.exports = {
         flexbox: 'no-2009'
       },
       stage: 3
-    })
+    }),
+    tailwindcss('./app/javascript/src/tailwind.js')
   ]
 }
