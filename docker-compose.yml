@@ -1,0 +1,20 @@
+version: '3'
+
+volumes:
+  socket:
+    external: false
+  pgdata:
+    external: false
+
+services:
+  db:
+    image: postgres:11-alpine
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=
+      - POSTGRES_HOST=localhost
+    volumes:
+      - socket:/var/run/postgresql/
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
